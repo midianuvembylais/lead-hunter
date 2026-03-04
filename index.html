@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lead Hunter</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <h1>Lead Hunter</h1>
+      <p>Painel de prospecção</p>
+    </div>
+
+    <div class="actions">
+      <input id="searchInput" class="input" type="search" placeholder="Buscar por nome, empresa, instagram ou telefone" />
+      <button id="addLeadBtn" class="btn primary" type="button">Adicionar lead</button>
+      <button id="resetBtn" class="btn" type="button">Reset demo</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="board" class="board" aria-label="Quadro de prospecção"></section>
+  </main>
+
+  <dialog id="leadDialog" class="dialog">
+    <form id="leadForm" class="form" method="dialog">
+      <h2>Novo lead</h2>
+
+      <label>
+        Nome
+        <input class="input" name="name" required maxlength="80" />
+      </label>
+
+      <label>
+        Empresa
+        <input class="input" name="company" maxlength="80" />
+      </label>
+
+      <label>
+        Instagram
+        <input class="input" name="instagram" placeholder="@perfil" maxlength="80" />
+      </label>
+
+      <label>
+        Telefone
+        <input class="input" name="phone" maxlength="30" />
+      </label>
+
+      <label>
+        Observações
+        <textarea class="input textarea" name="notes" rows="4" maxlength="500"></textarea>
+      </label>
+
+      <div class="row">
+        <label class="mini">
+          Status inicial
+          <select class="input" name="status" id="statusSelect"></select>
+        </label>
+      </div>
+
+      <div class="formActions">
+        <button class="btn" type="button" id="cancelDialogBtn">Cancelar</button>
+        <button class="btn primary" type="submit">Salvar</button>
+      </div>
+    </form>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
